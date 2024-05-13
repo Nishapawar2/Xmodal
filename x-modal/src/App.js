@@ -68,7 +68,7 @@ function App() {
         </button>
         {showModal && (
           <>
-            <div className="modal-wrapper"></div>
+            <div className="modal-wrapper" onClick={()=>setShowModal(true)}></div>
             <div className="modal-content">
               <h1>Fill Details</h1>
               <form onSubmit={handleSubmit}>
