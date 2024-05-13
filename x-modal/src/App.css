@@ -12,7 +12,7 @@
 h1{
   margin-bottom: 30px;
 }
-.modal{
+.modal-wrapper{
   position: fixed;
   left :0;
   right: 0;

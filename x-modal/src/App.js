@@ -21,7 +21,6 @@ function App() {
     });
   };
 
-
   const handleSubmit = (e) => {
     e.preventDefault();
     const newErrors = validateForm(formData);
@@ -38,7 +37,6 @@ function App() {
       if (newErrors.dob) {
         alert(newErrors.dob);
       }
-     
     }
   };
 
@@ -46,10 +44,10 @@ function App() {
     const errors = {};
     if (data.phone.length < 10 || data.phone.length > 10) {
       errors.phone =
-        "Invalid phone number. Please enter a 10-digit phone number.";  
+        "Invalid phone number. Please enter a 10-digit phone number.";
     }
     var now = new Date();
-    var inputDate=new Date(data.dob);
+    var inputDate = new Date(data.dob);
     if (inputDate > now) {
       errors.dob =
         "Invalid date of birth. Date of birth cannotbe in the future.";
@@ -58,16 +56,19 @@ function App() {
     return errors;
   };
 
-
   return (
-    <div className="App">   
-        <h1>User Details Modal</h1>
-        <button className="submit-button" onClick={() => setShowModal(true)}>
-          Open Form
-        </button>
-        {showModal && (
-          <>
-            <div className="modal" onClick={()=>setShowModal(false)}></div>
+    <div className="App">
+      <h1>User Details Modal</h1>
+      <button className="submit-button" onClick={() => setShowModal(true)}>
+        Open Form
+      </button>
+      {showModal && (
+        <>
+          <div
+            className="modal-wrapper"
+            onClick={() => setShowModal(false)}
+          ></div>
+          <div className="modal">
             <div className="modal-content">
               <h1>Fill Details</h1>
               <form onSubmit={handleSubmit}>
@@ -115,13 +116,12 @@ function App() {
                   onChange={handleChange}
                 />
                 <br />
-                <button className="submit-button">
-                  Submit
-                </button>
+                <button className="submit-button">Submit</button>
               </form>
             </div>
-          </>
-        )}     
+          </div>
+        </>
+      )}
     </div>
   );
 }
