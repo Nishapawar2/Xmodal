@@ -60,15 +60,14 @@ function App() {
 
 
   return (
-    <div className="App">
-      <div className="modal">
+    <div className="App">   
         <h1>User Details Modal</h1>
         <button className="submit-button" onClick={() => setShowModal(true)}>
           Open Form
         </button>
         {showModal && (
           <>
-            <div className="modal-wrapper" onClick={()=>setShowModal(false)}></div>
+            <div className="modal" onClick={()=>setShowModal(false)}></div>
             <div className="modal-content">
               <h1>Fill Details</h1>
               <form onSubmit={handleSubmit}>
@@ -122,8 +121,7 @@ function App() {
               </form>
             </div>
           </>
-        )}
-      </div>
+        )}     
     </div>
   );
 }
