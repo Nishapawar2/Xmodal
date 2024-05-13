@@ -1,5 +1,5 @@
 import "./App.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 function App() {
   const [showModal, setShowModal] = useState(false);
@@ -68,7 +68,7 @@ function App() {
         </button>
         {showModal && (
           <>
-            <div className="modal-wrapper" onClick={()=>setShowModal(true)}></div>
+            <div className="modal-wrapper" onClick={()=>setShowModal(false)}></div>
             <div className="modal-content">
               <h1>Fill Details</h1>
               <form onSubmit={handleSubmit}>
