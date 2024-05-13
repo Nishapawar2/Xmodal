@@ -22,7 +22,7 @@ h1{
   
   }
   
-  .modal-content{
+  .modal{
   position: fixed;
   width: 30rem;
   padding: 40px 40px;
@@ -30,7 +30,7 @@ h1{
   left: 50%;
   transform: translate(-50%,-50%);
   background-color: white;
-  
+  height: auto;
   }
   
   input{
