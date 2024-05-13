@@ -25,12 +25,12 @@ h1{
   .modal{
   position: fixed;
   width: 30rem;
+  height: auto;
   padding: 40px 40px;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  background-color: white;
-  height: auto;
+  background-color: white; 
   }
   
   input{
